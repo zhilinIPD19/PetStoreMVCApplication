@@ -30,6 +30,7 @@ namespace PetStoreMVCApplication.Models
         [Required]
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Phone Number")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string PhoneNumber { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
